@@ -3,6 +3,7 @@ body {
     color: #00FF00;
     font-family: 'Courier New', monospace;
     margin: 0;
+    background-image: url('scan-lines.png'); /* Add the path to your scan lines image */
 }
 
 .console {
