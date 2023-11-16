@@ -2,7 +2,7 @@ body {
     background-color: black;
     color: #00FF00;
     font-family: 'Courier New', monospace;
-    margin: 0;
+    margin: 1;
     background-image: url('scanlines.png'); /* Add the path to your scan lines image */
 }
 
