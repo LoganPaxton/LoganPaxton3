@@ -1,9 +1,34 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: #00FF00;
+    font-family: 'Courier New', monospace;
+    margin: 0;
 }
 
-h1 {
-    font-size: xx-large;
-    position: absolute;
-    left: 500px;
+.console {
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px; /* Adjust the width of the cursor line */
+    height: 20px; /* Adjust the height of the cursor line */
+    background-color: #00FF00; /* Green color for the cursor line */
+    animation: blink 1s infinite; /* Blinking animation */
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0; /* Make the cursor invisible at 50% of the animation */
+    }
+}
+
+.about-me, .tutorials {
+    margin-top: 20px;
+}
+
+a {
+    color: #66D9EF;
 }
