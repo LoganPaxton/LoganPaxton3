@@ -2,27 +2,25 @@ body {
     background-color: black;
     color: #00FF00;
     font-family: 'Courier New', monospace;
-    margin: 1;
-    background-image: url('scanlines.png'); /* Add the path to your scan lines image */
+    margin: 0;
+    position: relative;
 }
 
 .console {
     padding: 20px;
-    position: relative;
-    overflow: hidden;
 }
 
 .cursor {
     display: inline-block;
-    width: 8px; /* Adjust the width of the cursor line */
-    height: 20px; /* Adjust the height of the cursor line */
-    background-color: #00FF00; /* Green color for the cursor line */
-    animation: blink 1s infinite; /* Blinking animation */
+    width: 8px;
+    height: 20px;
+    background-color: #00FF00;
+    animation: blink 1s infinite;
 }
 
 @keyframes blink {
     50% {
-        opacity: 0; /* Make the cursor invisible at 50% of the animation */
+        opacity: 0;
     }
 }
 
@@ -32,4 +30,17 @@ body {
 
 a {
     color: #66D9EF;
+}
+
+/* Adding the scan lines directly in the CSS */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+    z-index: -1;
 }
